@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(180deg, rgba(30, 144, 255, 1) 0%, rgba(0, 204, 255, 1) 50%, rgba(0, 153, 204, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: black;
+    color: white;
+    overflow: auto;
+}
+
+.clr {
+    -webkit-text-stroke: 1px red;
+    color: rgb(8, 182, 250);
+    text-shadow: 2px 2px 5px black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.btn1 {
+    width: 48% !important;
+    padding: 10px !important;
+    border: none !important;
+    border-radius: 20px !important;
+    background-color: blue !important; 
+    color: white !important;
+    cursor: pointer;
+    text-align: center !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.btn1:hover {
+    background-color: darkblue !important;
+}
+.flex {
+    width: 100%;
+    max-width: 600px;
+    background-color: #333;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.flex label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.flex input,
+.flex select,
+.flex textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fef4f4;
+    color: rgb(0, 0, 0);
+}
+
+.flex input:required:invalid, 
+.flex select:required:invalid, 
+.flex textarea:required:invalid {
+    border-color: red;
+}
+
+.flex input:valid, 
+.flex select:valid, 
+.flex textarea:valid {
+    border-color: green;
+}
+
+.flex input:focus, 
+.flex select:focus, 
+.flex textarea:focus {
+    border-color: blue;
+    outline: none;
+}
+
+.flex input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.flex textarea {
+    resize: none;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .flex {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn1 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+}
